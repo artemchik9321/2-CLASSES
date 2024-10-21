@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Классы</title>
+</head>
+
+<body>
+    <script>
+        // Определение класса (class declaration)
+        /*class Rect 
+        {
+            // конструктор - инициализирует экземпляр класса Rect, представляет обычную функцию- конструктор
+            constructor(width, height) 
+            {
+                this.width = width;     // свойство width
+                this.height = height;
+            }
+
+            // метод, будет добавлен в прототип Rect.prototype
+            getArea() 
+            {
+                return this.height * this.width;
+            }
+
+            getPerimeter() 
+            {
+                return this.height * 2 + this.width * 2;
+            }
+        }
+        */
+        class Tringle 
+        {
+            constructor(sid1, sid2, sid3, height)
+            {
+                this.sid1 = sid1;
+                this.sid2 = sid2;
+                this.sid3 = sid3;
+                this.height = height;   
+            }
+            getPerimeter2() 
+            {
+                return this.sid1 + this.sid2 + this.sid3;
+            }
+
+            getArea2()
+            {
+                return this.sid1 * height / 2;
+            }
+            printInfo() 
+            {
+                console.log("стороны треугольника: " + this.sid1 + ", " + this.sid2 + ", " + this.sid3);
+                console.log("высота: " + this.height);
+                console.log("периметр: " + this.getPerimeter2());
+                console.log("площадь: " + this.getArea2());
+            }
+
+            setSide1(newSid1) 
+            {
+                this.sid1 = newSid1;
+            }
+            setSide2(newSid2) 
+            {
+                this.sid2 = newSid2;
+            }
+            setSide3(newSid3) 
+            {
+                this.sid3 = newSid3;
+            }
+            setHeight(newHeight) 
+            {
+                this.height = newHeight;
+            }
+
+        }
+
+        let t1 = new Tringle(10, 10, 10, 10);
+        let t2 = new Tringle(15, 15, 15, 15);
+
+        console.log(r1.width);
+        console.log("t1 area " + t1.getArea());
+        console.log("t1 perimeter " + t1.getPerimeter());
+
+        console.log("t2 area " + t2.getArea());
+        console.log("t2 perimeter " + t2.getPerimeter());
+    </script>
+</body>
+
+</html>
